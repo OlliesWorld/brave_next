@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* background-image: linear-gradient( 89.9deg,  rgba(255,243,110,1) 16.9%, rgba(30,204,214,1) 55.1%, rgba(5,54,154,1) 90.7% ); */
+  /* background-image: url('../bg-fun.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card{
+  cursor: pointer;
+  width: 340px;
+  height:480px;
+}
+.front, .back{
+  /* width:340px; */
+  /* height: 480px; */
+  overflow:hidden;
+  backface-visibility:hidden;
+  position:absolute;
+  transition: transform .5s linear;
+}
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+  background: transparent;
+  transform:rotateY(180deg);
+}
+
+.card[type= 'fictional'] {
+  background-color: red;
+}
