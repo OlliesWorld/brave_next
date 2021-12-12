@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'https://example.com'],
+    domains: [ 'https://brave-cards.herokuapp.com/'],
   },
   "compilerOptions": {
     "baseUrl": ".",
