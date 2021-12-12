@@ -20,24 +20,19 @@ export default function Home({cards}) {
                <div  className="card w-72 shadow-2xl mb-4 cursor-pointer rounded-lg">
                 <div className="front rounded-lg">
                 <div className="m-auto ">
-                <Image className="w-72 h-72" src={`http://localhost:1337${card.mainImage.url}`}  alt={card.name} width={290} height={275}/>
+                <Image className=" rounded-lg overflow-hidden" layout="responsive"  src={`http://localhost:1337${card.mainImage.url}`}  alt={card.name} width={280} height={275}/>
                 </div>
                 <div className="relative w-16 h-16 bg-green-900 rounded-full flex justify-center items-center text-center text-white p-5 shadow-xl -mt-16 ml-2">
                   
                   {card.type}
             
                 </div >
-              <div className="px-2 py-2 bg-purple-900 text-purple-50 w-72">
+                <div className="rounded-bl-lg rounded-br-lg  px-2 py-2 mt-4 bg-blue-900">
                 <div className="font-bold text-2xl mb-2 text-center">{card.alias}</div>
-                
-                <div className="flex flex-col text-center justify-center space-x-4">
-                  <div className="text-xl">{card.power}</div>
-                 
+                <div className="flex justify-center space-x-4">
+                  <div >{card.power}</div>
+                  <div>{card.reign}</div>
                 </div>
-                <div className="pb-2">
-                <p className="mt-2 mb-0 text-center font-bold underline">Quote:</p>
-                  <p className="px-2">{card.quote1}</p>
-                  </div>
               </div>
               </div>
 

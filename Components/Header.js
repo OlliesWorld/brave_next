@@ -8,7 +8,7 @@ export default function Header() {
 
     const { user } = useContext(AuthContext)
     return (
-        <div className="w-full grid grid-cols-3 justify-center items-center py-4 text-center bg-purple-900">
+        <div className="w-full grid grid-cols-3 justify-center items-center py-4 text-center bg-blue-900">
             <div>
                 <Link href="/">
                     <a className="text-purple-50 text-bold text-4xl">Brave_Cards</a>
@@ -31,7 +31,7 @@ export default function Header() {
             )}
                 </div>
             
-            <Link  href="../contact" ><a className="text-xl text-green-50 hover:bg-blue-900 hover:text-2xl">Contact</a></Link>
+            <Link  href="/contact" ><a className="text-xl text-green-50 hover:bg-blue-900 hover:text-2xl">Contact</a></Link>
         </div>
     )
 }
