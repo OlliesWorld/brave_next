@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'strapi-zf3b:10000'],
+    domains: ['localhost', 'https://strapi-zf3b.onrender.com'],
   },
   "compilerOptions": {
     "baseUrl": ".",
