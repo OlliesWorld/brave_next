@@ -33,7 +33,7 @@ export default function UploadModal() {
             // formdata.append("files.file", files[0], "");
   
             
-            fetch("http://localhost:1337/photos", {
+            fetch(`${API_URL}/photos`, {
               method: "POST",
               headers: {"Content-Type": "application/form-data"},
               body: {
