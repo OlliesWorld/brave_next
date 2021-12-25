@@ -1,6 +1,6 @@
 import Link from "next/link";
-
 import Image from "next/image";
+import { fromImageToUrl, API_URL} from  '../utils/urls';
 
 export default function Home({cards}) {
   // console.log(cards)
@@ -20,7 +20,7 @@ export default function Home({cards}) {
                <div  className="card w-72 shadow-2xl mb-4 cursor-pointer rounded-lg">
                 <div className="front rounded-lg">
                 <div className="m-auto ">
-                <Image className=" rounded-lg overflow-hidden" layout="responsive" sizes="50vh" src={`http://localhost:1337${card.mainImage.url}`}  alt={card.name} width={280} height={275}/>
+                <Image className=" rounded-lg overflow-hidden" layout="responsive" sizes="50vh" src={ fromImageToUrl(card.mainImage)}  alt={card.name} width={280} height={275}/>
                 </div>
                 <div className="relative w-16 h-16 bg-green-900 rounded-full flex justify-center items-center text-center text-white p-5 shadow-xl -mt-16 ml-2">
                   
@@ -64,7 +64,7 @@ export default function Home({cards}) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:1337/cards");
+  const res = await fetch(`${API_URL}/cards`);
   const cards = await res.json();
 
   return {

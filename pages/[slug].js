@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { fromImageToUrl, API_URL} from  '../utils/urls';
 
 export default function Card({ card }) {
     // console.log(card)
@@ -12,7 +13,7 @@ export default function Card({ card }) {
             <p>Alias: <span>{card.alias}</span></p>
         </div>
         <div className='pb-4 text-center'>
-        <Image className="m-auto w-52 rounded-lg overflow-hidden" layout="fixed" sizes="50vh" src={`http://localhost:1337${card.mainImage.url}`}  alt={card.name} width={280} height={275}/>
+        <Image className="m-auto w-52 rounded-lg overflow-hidden" layout="fixed" sizes="50vh" src={fromImageToUrl(card.mainImage)}  alt={card.name} width={280} height={275}/>
         </div>
         <div className="text-blue-900 font-extrabold text-center pb-8">
               <div className="origin">Origin: <span>{card.origin}</span></div>
@@ -36,10 +37,10 @@ export default function Card({ card }) {
               </div>
               <div className="flex justify-center m-auto w-3/4">
               <div className="m-auto pt-4" >
-                  <Image className="rounded-lg" src={`http://localhost:1337${card.images[0].url}`}  alt={card.name} width={275} height={300} />
+                  <Image className="rounded-lg" src={fromImageToUrl(card.images[0])}  alt={card.name} width={275} height={300} />
               </div>
               <div className="m-auto pt-4" >
-                  <Image className="rounded-lg" src={`http://localhost:1337${card.images[1].url}`}  alt={card.alias} width={275} height={300} />
+                  <Image className="rounded-lg" src={fromImageToUrl(card.images[1])}  alt={card.alias} width={275} height={300} />
                       </div>
             </div>
           
@@ -53,7 +54,7 @@ export default function Card({ card }) {
 
 // tell next.js how many pages there are
 export async function getStaticPaths() {
-    const res = await fetch("http://localhost:1337/cards");
+    const res = await fetch(`${API_URL}/cards`);
     const cards = await res.json();
   
     const paths = cards.map((card) => ({
