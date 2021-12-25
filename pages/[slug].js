@@ -71,7 +71,7 @@ export async function getStaticPaths() {
   export async function getStaticProps({ params }) {
     const { slug } = params;
   
-    const res = await fetch(`${API_URL}/cards/cards?Slug=${slug}`);
+    const res = await fetch(`${API_URL}/cards?Slug=${slug}`);
     const data = await res.json();
     const card = data[0];
   
