@@ -29,7 +29,7 @@ export default function Login() {
 					
 					
 					{/* <input className='mb-4 border-b-2' id='name' name='password' type='text' autoComplete='password' required /> */}
-					<button type='submit' className='px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700'>Login</button>
+					<button type='submit' className='px-4 py-2 font-bold text-white bg-blue-900 rounded-full hover:bg-blue-700'>Login</button>
 				</form>
 				</div>
 			</div>

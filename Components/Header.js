@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 import AuthContext from "../context/AuthContext";
-import UploadModal from "./uploadModal";
+// import UploadModal from "./uploadModal";
 
 export default function Header() {
 
@@ -30,8 +30,8 @@ export default function Header() {
             <a>Login</a></Link>
     )}
         </div>
-    <UploadModal />
-    
+    {/* z<UploadModal /> */}
+    <Link  href="/resources" ><a className="text-xl text-green-50 hover:bg-blue-900 hover:text-2xl">Resource Links</a></Link>
     <Link  href="/contact" ><a className="text-xl text-green-50 hover:bg-blue-900 hover:text-2xl">Contact</a></Link>
 </div>
         </div>

@@ -17,8 +17,8 @@ export default function Home({cards}) {
        {cards &&
         cards.map((card) => (
           <Link href={`/${card.Slug}`} key={card.id} passHref>
-               <div  className="card w-3/4 shadow-2xl cursor-pointer rounded-lg">
-                <div className="front rounded-lg m-auto">
+               <div  className="card w-64 shadow-2xl cursor-pointer rounded-lg">
+                <div className="front w-64 rounded-lg m-auto">
                 <div className="w-full ">
                 <Image className="m-auto  rounded-lg overflow-hidden" layout="fixed" sizes="50vh" src={fromImageToUrl(card.mainImage)}  alt={card.name} width={280} height={275}/>
                 </div>
@@ -27,21 +27,21 @@ export default function Home({cards}) {
                   {card.type}
             
                 </div >
-                <div className="rounded-bl-lg rounded-br-lg  px-2 py-2 mt-2 bg-blue-900">
+                <div className="rounded-bl-lg rounded-br-lg  px-2 py-2 -mt-2 bg-blue-900">
                 <div className="font-bold text-2xl mb-2 text-center">{card.alias}</div>
-                <div className="flex justify-center space-x-4">
+                <div className=" text-center m-0">
                   <div >{card.power}</div>
-                  <div>{card.reign}</div>
+                  <div >{card.reign}</div>
                 </div>
               </div>
               </div>
 
-              <div  className="back text-purple-50 max-w-md w-72 h-3/4 shadow-lg  bg-white">
+              <div  className="back text-purple-50 max-w-md w-64 h-72 shadow-lg  bg-white">
               <div className="px-6 bg-blue-900 ">
                 <div className="font-bold text-2xl  text-center">{card.name}</div>
                 <div className="">
                   <div>Power: {card.power}</div>
-                  <div>Reign: {card.reign}</div>
+                  <div >Reign: {card.reign}</div>
                 </div>
                 
               </div>
