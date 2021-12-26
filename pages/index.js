@@ -36,7 +36,7 @@ export default function Home({cards}) {
               </div>
               </div>
 
-              <div  className="back text-purple-50 max-w-md w-72 h-1/4 shadow-lg  bg-white">
+              <div  className="back text-purple-50 max-w-md w-72 h-3/4 shadow-lg  bg-white">
               <div className="px-6 bg-blue-900 ">
                 <div className="font-bold text-2xl  text-center">{card.name}</div>
                 <div className="">

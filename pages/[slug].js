@@ -41,6 +41,7 @@ export default function Card({ card }) {
               </div>
               <div className="m-auto pt-4" >
                   <Image className="rounded-lg" src={fromImageToUrl(card.images[1])}  alt={card.alias} width={275} height={300} />
+              
                       </div>
             </div>
             {/* Card made by : {card} */}
