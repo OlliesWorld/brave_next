@@ -48,7 +48,7 @@ export default function UploadModal() {
         <>
             <button 
                 onClick={openModal}
-                className="bg-white px-2 text-gray-700 rounded-full focus:outline-none focus:bg-green-700"
+                className="bg-white lg:mr-40 px-2 text-gray-700 rounded-full focus:outline-none focus:bg-green-700"
             > Upload Card
             </button>
             
