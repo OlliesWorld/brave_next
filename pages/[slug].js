@@ -43,6 +43,7 @@ export default function Card({ card }) {
                   <Image className="rounded-lg" src={fromImageToUrl(card.images[1])}  alt={card.alias} width={275} height={300} />
                       </div>
             </div>
+            Card made by : {card.user}
           
         </div>
         

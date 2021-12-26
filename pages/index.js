@@ -13,11 +13,11 @@ export default function Home({cards}) {
           <h4>Click on a card to learn more about each person!</h4>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center mb-60 ml-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 h-full mb-20 ml-10">
        {cards &&
         cards.map((card) => (
           <Link href={`/${card.Slug}`} key={card.id} passHref>
-               <div  className="card w-72 h-full shadow-2xl cursor-pointer rounded-lg">
+               <div  className="card w-3/4 shadow-2xl cursor-pointer rounded-lg">
                 <div className="front rounded-lg m-auto">
                 <div className="w-full ">
                 <Image className="m-auto  rounded-lg overflow-hidden" layout="fixed" sizes="50vh" src={fromImageToUrl(card.mainImage)}  alt={card.name} width={280} height={275}/>
