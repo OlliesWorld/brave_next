@@ -1,5 +1,5 @@
 import Image from 'next/image'
-// import { fromImageToUrl, API_URL} from  '../utils/urls';
+import { fromImageToUrl, API_URL} from  '../utils/urls';
 
 export default function Card({ card }) {
     // console.log(card)
