@@ -14,7 +14,7 @@ export default function Home({cards}) {
         </div>
         
         <div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center ml-10">
-      {cards &&
+       {cards &&
         cards.map((card) => (
           <Link href={`/${card.Slug}`} key={card.id} passHref>
                <div  className="card w-72 shadow-2xl mb-4 cursor-pointer rounded-lg">
@@ -46,14 +46,14 @@ export default function Home({cards}) {
                 
               </div>
                   <div className="p-4 bg-purple-900 h-72 my-8">
-                  {/* Click for The Why */}
+                   
                     <span className="font-bold">My Why:</span> {card.theWhy} 
                     </div> 
                   </div>
           </div>
           </Link>
 
-        ))}
+        ))} 
       
     </div>
    
@@ -64,10 +64,14 @@ export default function Home({cards}) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/cards`);
+  const baseURL = 'http://localhost';
+  const url = 'https://strapi-gblj.onrender.com/cards';
+  
+  const res = await fetch(new URL(url, baseURL))
+  
   const cards = await res.json();
-
+  console.log(cards)
   return {
-    props: { cards },
+    props: { cards},
   };
 }

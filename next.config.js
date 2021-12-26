@@ -1,7 +1,8 @@
 
 module.exports = {
+  
     images: {
-        domains: ['localhost', `https://strapi-gblj.onrender.com`],
+        domains: ['localhost', `strapi-gblj.onrender.com`],
       },
     future: {
       webpack5: true, // by default, if you customize webpack config, they switch back to version 4. 

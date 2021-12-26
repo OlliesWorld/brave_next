@@ -1,4 +1,4 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337"
+export const API_URL = process.env.API_URL || "http://localhost:1337"
 
 export const MAGIC_PUBLIC_KEY = process.env.NEXT_PUBLIC_MAGIC_PUBLIC_KEY  
 
@@ -13,7 +13,7 @@ export const MAGIC_PUBLIC_KEY = process.env.NEXT_PUBLIC_MAGIC_PUBLIC_KEY
     }
     if (image.url.indexOf("/") === 0) {
       //It's a relative url, add API URL
-      return `${API_URL}${image.url}`;
+      return `https://strapi-gblj.onrender.com${image.url}`;
     }
   
     return image.url;

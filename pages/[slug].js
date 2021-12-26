@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { fromImageToUrl, API_URL} from  '../utils/urls';
+// import { fromImageToUrl, API_URL} from  '../utils/urls';
 
 export default function Card({ card }) {
     // console.log(card)
@@ -54,7 +54,7 @@ export default function Card({ card }) {
 
 // tell next.js how many pages there are
 export async function getStaticPaths() {
-    const res = await fetch(`${API_URL}/cards`);
+    const res = await fetch(`https://strapi-gblj.onrender.com/cards`);
     const cards = await res.json();
   
     const paths = cards.map((card) => ({
@@ -71,7 +71,7 @@ export async function getStaticPaths() {
   export async function getStaticProps({ params }) {
     const { slug } = params;
   
-    const res = await fetch(`${API_URL}/cards?Slug=${slug}`);
+    const res = await fetch(`https://strapi-gblj.onrender.com/cards?Slug=${slug}`);
     const data = await res.json();
     const card = data[0];
   
