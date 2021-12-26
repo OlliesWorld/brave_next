@@ -25,11 +25,11 @@ a {
   box-sizing: border-box;
 }
 
-.card{
+/* .card{
   cursor: pointer;
-  width: 340px;
-  height:480px;
-}
+  width: 305px;
+  height: 375px;
+} */
 .front, .back{
   /* width:340px; */
   /* height: 480px; */
