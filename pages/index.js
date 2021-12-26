@@ -68,6 +68,6 @@ export async function getStaticProps() {
   const cards = await res.json();
 
   return {
-    props: { cards},
+    props: { cards },
   };
 }

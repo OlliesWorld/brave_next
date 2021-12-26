@@ -36,3 +36,5 @@ yarn-error.log*
 
 
 .toml
+# Local Netlify folder
+.netlify
