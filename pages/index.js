@@ -17,7 +17,7 @@ export default function Home({cards}) {
        {cards &&
         cards.map((card) => (
           <Link href={`/${card.Slug}`} key={card.id} passHref>
-               <div  className="card w-64 shadow-2xl cursor-pointer rounded-lg mb-6">
+               <div  className="card w-64 h-72 shadow-2xl cursor-pointer rounded-lg mb-12 cursor-pointer">
                 <div className="front w-64 rounded-lg m-auto">
                 <div className="w-full ">
                 <img src={fromImageToUrl(card.mainImage)}  alt={card.name} className="w-full h-60"  />
