@@ -4,7 +4,7 @@ import { fromImageToUrl, API_URL} from  '../utils/urls';
 export default function Card({ card }) {
     // console.log(card)
     return (
-      <div className="bg-[#013220]">
+      <div className="bg-regal-green">
           
            
           <div className="text-center">
@@ -15,14 +15,14 @@ export default function Card({ card }) {
         <div className='pb-4 text-center'>
         <Image className="m-auto w-52 rounded-lg overflow-hidden" layout="fixed" sizes="50vh" src={fromImageToUrl(card.mainImage)}  alt={card.name} width={280} height={275}/>
         </div>
-        <div className="text-blue-900 font-extrabold text-center pb-8">
+        <div className="text-blue-900 font-extra-bold text-3xl text-center pb-8">
               <div className="origin">Origin: <span>{card.origin}</span></div>
               <div className="power">Power: <span>{card.power}</span></div>
               <div className="reign">Reign: <span>{card.reign}</span></div>
           
           </div>
           <div className="text-center mb-4 w-2/3 m-auto pb-8">
-            <div><span className="font-bold">The Why: </span><div>{card.theWhy}</div></div>
+            <div><span className="font-extra-bold text-3xl underline">The Why: </span><div className='text-xl'>{card.theWhy}</div></div>
             {/* <a href='{resourceLink1}' target="_blank">Link #1</a> */}
         </div>
         <div className="relative border-2 bg-blue-900 pb-4 w-3/4 m-auto">

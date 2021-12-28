@@ -9,13 +9,15 @@ export default function Header() {
 
     const { user } = useContext(AuthContext)
     return (
-        <div className="w-full  py-4 text-center bg-regal-gold/75 text-white">
-            <Emoji symbol="\u{1F451}" label="star" />
+        <div className="w-full  py-4 text-center bg-raisin-black text-white">
+            <div className="hidden lg:block">
+                <Emoji symbol="\u{1F451}" label="star" />
+                </div>
             
-        <div className="flex justify-around items-center text-center">
+        <div className="lg:flex justify-center items-center text-center">
             <Emoji symbol="\u{1F451}" label="star" />
             <div className=""> {user ? (
-                <div >
+                <div className="px-4">
             
                 <Link href="/account" >
                     <a className=""><span className="text-black font-bold">User:</span> {user.email}</a>
@@ -30,12 +32,12 @@ export default function Header() {
                 <Link href="/">
                     <a className="text-bold text-4xl">Brave_Cards</a>
                 </Link>
-                <h2 className="text-2xl text-green-500">Helping you find inspiration!</h2>
+                <h2 className="text-2xl text-regal-green">Helping you find inspiration!</h2>
             </div>
             {/* z<UploadModal /> */}
             <div className="text-center">
-                <Link  href="/resources" ><a className="text-xl  hover:text-green-600 hover:text-2xl pr-4">Resource Links</a></Link>
-                <Link  href="/contact" ><a className="text-xl hover:text-green-600 hover:text-2xl">Contact</a></Link>
+                <Link  href="/resources" ><a className="text-xl text-stone-100  hover:text-regal-green hover:text-2xl px-4">Resource Links</a></Link>
+                <Link  href="/contact" ><a className="text-xl text-stone-100 hover:text-regal-green hover:text-2xl px-4">Contact</a></Link>
             </div>
             <Emoji symbol="\u{1F451}" label="star" />
         </div>
