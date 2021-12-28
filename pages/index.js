@@ -7,7 +7,7 @@ export default function Home({cards}) {
   return (
     <div className="main bg-stone-200 h-full pt-4 pb-16">
   
-        <div className="header lg:w-3/4 m-auto py-4 text-center text-white bg-regal-green font-extrabold">
+        <div className="header rounded-lg lg:w-3/4 m-auto py-4 text-center text-white bg-regal-green font-extrabold">
           <h2 >These Women are </h2>
           <h2 className="text-4xl uppercase">inspiring, courageous, rebellious, kind, compassionate, fierce, and much more.</h2>
           <h4>Click on a card to learn more about each person!</h4>
@@ -17,13 +17,13 @@ export default function Home({cards}) {
        {cards &&
         cards.map((card) => (
           <Link href={`/${card.Slug}`} key={card.id} passHref>
-               <div  className="card w-64 shadow-2xl cursor-pointer rounded-lg">
+               <div  className="card w-64 shadow-2xl cursor-pointer rounded-lg mb-6">
                 <div className="front w-64 rounded-lg m-auto">
                 <div className="w-full ">
-                <img src={fromImageToUrl(card.mainImage)}  alt={card.name} className="w-full h-64"  />
+                <img src={fromImageToUrl(card.mainImage)}  alt={card.name} className="w-full h-60"  />
                 {/* <Image className="m-auto  rounded-lg overflow-hidden" layout="fixed" sizes="50vh" src={fromImageToUrl(card.mainImage)}  alt={card.name} width={280} height={275}/> */}
                 </div>
-                <div className="relative w-16 h-16 bg-regal-gold rounded-full flex justify-center items-center text-center text-white p-5 shadow-xl -mt-16 ml-2">
+                <div className="relative w-16 h-16 bg-regal-gold/75 rounded-full flex justify-center items-center text-center text-white p-5 shadow-xl -mt-16 ml-2">
                   
                   {card.type}
             
@@ -37,7 +37,7 @@ export default function Home({cards}) {
               </div>
               </div>
 
-              <div  className="back rounded-lg text-purple-50 max-w-md w-64 h-72 shadow-lg  bg-white">
+              <div  className="back rounded-lg text-purple-50 max-w-md w-64 h-3/5 shadow-lg  bg-white">
               <div className="px-6 bg-blue-900 ">
                 <div className="font-bold text-2xl  text-center">{card.name}</div>
                 <div className="">
