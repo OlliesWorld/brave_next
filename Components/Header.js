@@ -9,7 +9,7 @@ export default function Header() {
 
     const { user } = useContext(AuthContext)
     return (
-        <div className="w-full  py-4 text-center bg-raisin-black text-white">
+        <div className="w-full  py-4 text-center bg-regal-black text-white">
             <div className="hidden lg:block">
                 <Emoji symbol="\u{1F451}" label="star" />
                 </div>

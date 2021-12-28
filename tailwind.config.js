@@ -1,10 +1,11 @@
 module.exports = {
   // mode: 'jit',
   content: [
+    './src/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}', 
     './components/**/*.{js,ts,jsx,tsx}'
   ],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontWeight: {
       'extra-bold': 800,
@@ -13,7 +14,7 @@ module.exports = {
       colors: {
         'regal-green': '#4d8b31',
         'regal-gold': '#503F21',
-        'raisin-black': '#1e212b'
+        'regal-black': '#1e212b',
       }
     },
    
