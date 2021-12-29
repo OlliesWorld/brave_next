@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useContext } from 'react'
 import Link from 'next/link'
 import AuthContext from '../context/AuthContext'
-import UploadModal from "../Components/uploadModal";
+import UploadModal from "../components/uploadModal";
 
 
 export default function Account() {

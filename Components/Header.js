@@ -9,7 +9,7 @@ export default function Header() {
 
     const { user } = useContext(AuthContext)
     return (
-        <div className="w-full  py-4 text-center bg-regal-black text-white">
+        <div className="w-full  py-4 text-center bg-blue-900 text-white">
             <div className="hidden lg:block">
                 <Emoji symbol="\u{1F451}" label="star" />
                 </div>
@@ -28,9 +28,9 @@ export default function Header() {
                     <a>Login</a></Link>
             )}
                 </div>
-                <div>
+                <div className="px-4">
                 <Link href="/">
-                    <a className="text-bold text-4xl">Brave_Cards</a>
+                    <a className="text-bold text-4xl ">Brave_Cards</a>
                 </Link>
                 <h2 className="text-2xl text-regal-green">Helping you find inspiration!</h2>
             </div>

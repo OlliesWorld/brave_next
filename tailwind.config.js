@@ -18,7 +18,9 @@ module.exports = {
         'regal-black': '#1e212b',
       }
     },
-   
+    fontFamily: {
+      sans: ['Archivo', 'sans-serif'],
+    }
   },
   variants: {
     extend: {},

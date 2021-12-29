@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
 
-import Layout from '../Components/Layout'
+import Layout from '../components/Layout'
 import { AuthProvider }from '../context/AuthContext'
 
 function MyApp({ Component, pageProps: {session, ...pageProps}}) {

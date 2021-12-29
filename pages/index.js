@@ -5,7 +5,7 @@ import { fromImageToUrl, API_URL} from  '../utils/urls';
 export default function Home({cards}) {
   // console.log(cards)
   return (
-    <div className="main bg-stone-200 h-full pt-4 pb-16">
+    <div className="main bg-stone-200 h-full m-auto pt-4 pb-16">
   
         <div className="header rounded-lg lg:w-3/4 m-auto py-4 text-center text-white bg-regal-green font-extrabold">
           <h2 >These Women are </h2>
@@ -32,7 +32,7 @@ export default function Home({cards}) {
                 <div className="font-bold text-2xl mb-2 text-center">{card.alias}</div>
                 <div className=" text-center m-0">
                   <div >{card.power}</div>
-                  <div >{card.reign}</div>
+                  <div >Reign {card.reign}</div>
                 </div>
               </div>
               </div>
@@ -49,7 +49,7 @@ export default function Home({cards}) {
                   <div className="px-4 h-full text-black overflow-hidden">
                    <div className="mb-2">Quote - {card.quote1}</div>
                     <span className="font-bold">My Why:</span> click to learn more
-                      {/* {card.theWhy}  */}
+                      
                     </div> 
                   </div>
           </div>
