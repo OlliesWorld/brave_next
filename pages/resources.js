@@ -1,6 +1,4 @@
- 
- 
- import Emoji from "../components/Emoji"
+import Emoji from "../Components/Emoji"
  
  export default function Resources() {
      return (

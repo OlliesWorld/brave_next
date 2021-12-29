@@ -17,7 +17,7 @@ export default function Home({cards}) {
        {cards &&
         cards.map((card) => (
           <Link href={`/${card.Slug}`} key={card.id} passHref>
-               <div  className="card w-64 h-72 shadow-2xl cursor-pointer rounded-lg mb-12 cursor-pointer">
+               <div  className="card w-64 h-72 shadow-2xl rounded-lg mb-12 cursor-pointer">
                 <div className="front w-64 rounded-lg m-auto">
                 <div className="w-full ">
                 <img src={fromImageToUrl(card.mainImage)}  alt={card.name} className="w-full h-60"  />
@@ -58,7 +58,7 @@ export default function Home({cards}) {
         ))} 
       
     </div>
-   <div className="mt-12 text-center text-3xl">For more information about these incredible people check out: <Link href="/resources" ><h2 className="text-regal-green text-extra-bold">Resources Page</h2></Link></div>
+   <div className="mt-12 text-center text-3xl">For more information about these incredible people check out: <Link href="/resources" passHref><h2 className="text-regal-green text-extra-bold">Resources Page</h2></Link></div>
 </div>
 
      
